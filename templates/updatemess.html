@@ -1,0 +1,68 @@
+{% extends 'index.html' %}
+{% block content %}
+ <div class="container my-5">
+  <h1 class="text-center">Update mess</h1>
+  <form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Title</label>
+        <input type="text" name="title" value="{{mess.title}}" class="form-control" id="exampleFormControlInput1">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+        <textarea class="form-control" name="desc"  id="exampleFormControlTextarea1" rows="3">{{mess.desc}}</textarea>
+      </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">price</label>
+        <input type="text" name="price" value="{{mess.price}}"  class="form-control" id="exampleFormControlInput1">
+      </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Maxprice</label>
+        <input type="text" name="cutprice" class="form-control" value="{{mess.cutprice}}"  id="exampleFormControlInput1">
+      </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Mapurl</label>
+        <input type="text" name="mapurl" class="form-control" value="{{mess.mapurl}}"  id="exampleFormControlInput1">
+      </div>
+      <div class="mb-3">
+      <!-- {% if mess.image %}
+      <img src="{{mess.image.url}}" alt="">
+      {% endif %} -->
+        <label for="formFile" class="form-label">Image</label>
+        <input class="form-control" name="image" type="file" id="formFile">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Address</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">{{mess.address}}</textarea>
+      </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">dish1</label>
+        <input type="text" name="dish1"  class="form-control" value="{{mess.dish1}}"  id="exampleFormControlInput1">
+      </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">dish2</label>
+        <input type="text" name="dish2"  class="form-control" value="{{mess.dish2}}"  id="exampleFormControlInput1">
+      </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">dish3</label>
+        <input type="text" name="dish3"  class="form-control" value="{{mess.dish3}}"  id="exampleFormControlInput1">
+      </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">dish4</label>
+        <input type="text" name="dish4"  class="form-control" value="{{mess.dish4}}"  id="exampleFormControlInput1">
+      </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">dish5</label>
+        <input type="text" name="dish5" class="form-control" value="{{mess.dish5}}"  id="exampleFormControlInput1">
+      </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">dish6</label>
+        <input type="text" name="dish6" class="form-control" value="{{mess.dish6}}"  id="exampleFormControlInput1">
+      </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">dish7</label>
+        <input type="text" name="dish7" class="form-control"  value="{{mess.dish7}}"  id="exampleFormControlInput1">
+      </div>
+      <button type="submit" class="btn btn-danger">Submit</button></form>
+ </div>
+  {% endblock %}
