@@ -19,6 +19,9 @@ class Mess(models.Model):
     dish5 = models.CharField(max_length=100, blank=True)
     dish6 = models.CharField(max_length=100, blank=True)
     dish7 = models.CharField(max_length=100, blank=True)
+    is_veg = models.BooleanField(default=True)
+    owner = models.CharField(max_length=122, blank=True)
+    contact_owener = models.CharField(max_length=12, blank=True)
 
   
        

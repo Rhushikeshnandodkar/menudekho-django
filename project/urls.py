@@ -23,5 +23,6 @@ urlpatterns = [
     path('', include('app.urls'))
 ]
 urlpatterns = urlpatterns + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)  
-
+admin.site.site_header = 'Menudekho'
+admin.site.index_title = 'Features area' 
 

@@ -35,6 +35,21 @@
         <label for="exampleFormControlTextarea1" class="form-label">Address</label>
         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">{{mess.address}}</textarea>
       </div>
+      <div class="form-check my-4">
+        <label class="form-check-label" for="flexCheckChecked">
+         Is Veg
+        </label>
+        <input type="checkbox" name="enable" id="enable" value="on"
+        {% if enable %}checked="checked"{% endif %}  checked/>
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Owner Name</label>
+        <input type="text" name="owner"  class="form-control" value="{{mess.owner}}"  id="exampleFormControlInput1">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Contact</label>
+        <input type="text" name="contact_owner"  class="form-control" value="{{mess.contact_owner}}"  id="exampleFormControlInput1">
+      </div>
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">dish1</label>
         <input type="text" name="dish1"  class="form-control" value="{{mess.dish1}}"  id="exampleFormControlInput1">

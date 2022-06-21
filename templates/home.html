@@ -28,14 +28,17 @@
             <a class="nav-link disabled">Disabled</a>
           </li>
         </ul>
-        <form class="d-flex" action="/search" role="search">
-          <input id="query" name="query" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+        <form method="get" action="/search" class="d-flex">
+          <div class="input mx-auto my-5">
+            <input type="text" name="query" class="w-149"  id="tags" placehoder="search">
+            <button class="btn btn-dark" type="submit">Search</button>
+          </div>
+          </form>
       </div>
     </div>
   </nav>
   <div class="container my-xxl-5">
+    <h1>veg mess</h1>
    {% for i in mess %}
   <div class="card" style="width: 18rem;">
     <img src="{{i.image.url}}" class="card-img-top" alt="...">
@@ -46,6 +49,32 @@
     </div>
 </div>
 {% endfor %}
-
-  </div>
+</div>
+  <div class="container my-xxl-5">
+    <h1>non veg mess</h1>
+   {% for j in non_veg %}
+  <div class="card" style="width: 18rem;">
+    <img src="{{j.image.url}}" class="card-img-top" alt="..." >
+    <div class="card-body">
+      <h5 class="card-title">{{j.title}}</h5>
+      <p class="card-text">{{j.desc}}</p>
+      <a href="detail/{{j.mess_id}}" class="btn btn-primary">Go somewhere</a>
+    </div>
+</div>
+{% endfor %}
+</div>
   {% endblock %}
+  <script>
+    $( function() {
+      var availableTags = [
+          {% for k in all_mess %}
+              "{{i.title}}",
+              "{{i.desc}}",
+          {% endfor %}
+
+      ];
+      $( "#tags" ).autocomplete({
+        source: availableTags
+      });
+    } );
+    </script>
