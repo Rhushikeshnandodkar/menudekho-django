@@ -1,5 +1,26 @@
-{% extends 'index.html' %}
-{% block content %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src=  
+"https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js">  
+    </script>  
+    
+    <script src=  
+"https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js">  
+    </script>  
+    
+    <link href=  
+"http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/ui-lightness/jquery-ui.css"
+        rel="stylesheet" type="text/css" />  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>
+ 
+  <body>
  <div class="container my-5">
   <h1 class="text-center">Update mess</h1>
   <form action="" method="post" enctype="multipart/form-data">
@@ -52,32 +73,65 @@
       </div>
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">dish1</label>
-        <input type="text" name="dish1"  class="form-control" value="{{mess.dish1}}"  id="exampleFormControlInput1">
+        <input type="text" name="dish1"  class="form-control" id="tags1" value="{{mess.dish1}}"  id="exampleFormControlInput1">
       </div>
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">dish2</label>
-        <input type="text" name="dish2"  class="form-control" value="{{mess.dish2}}"  id="exampleFormControlInput1">
+        <input type="text" name="dish2"  class="form-control" id="tags2" value="{{mess.dish2}}"  id="exampleFormControlInput1">
       </div>
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">dish3</label>
-        <input type="text" name="dish3"  class="form-control" value="{{mess.dish3}}"  id="exampleFormControlInput1">
+        <input type="text" name="dish3"  class="form-control" id="tags3" value="{{mess.dish3}}"  id="exampleFormControlInput1">
       </div>
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">dish4</label>
-        <input type="text" name="dish4"  class="form-control" value="{{mess.dish4}}"  id="exampleFormControlInput1">
+        <input type="text" name="dish4"  class="form-control" id="tags4" value="{{mess.dish4}}"  id="exampleFormControlInput1">
       </div>
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">dish5</label>
-        <input type="text" name="dish5" class="form-control" value="{{mess.dish5}}"  id="exampleFormControlInput1">
+        <input type="text" name="dish5" class="form-control" id="tags5" value="{{mess.dish5}}"  id="exampleFormControlInput1">
       </div>
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">dish6</label>
-        <input type="text" name="dish6" class="form-control" value="{{mess.dish6}}"  id="exampleFormControlInput1">
+        <input type="text" name="dish6" class="form-control" id="tags6" value="{{mess.dish6}}"  id="exampleFormControlInput1">
       </div>
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">dish7</label>
-        <input type="text" name="dish7" class="form-control"  value="{{mess.dish7}}"  id="exampleFormControlInput1">
+        <input type="text" name="dish7" class="form-control" id="tags7"  value="{{mess.dish7}}"  id="exampleFormControlInput1">
       </div>
       <button type="submit" class="btn btn-danger">Submit</button></form>
  </div>
-  {% endblock %}
+</body>
+<script>
+  $( function() {
+var availableTags = [
+"daal", "rice"
+];
+$( "#tags1" ).autocomplete({
+  source: availableTags
+});
+$( "#tags2" ).autocomplete({
+  source: availableTags
+});
+$( "#tags3" ).autocomplete({
+  source: availableTags
+});
+$( "#tags4" ).autocomplete({
+  source: availableTags
+});
+$( "#tags5" ).autocomplete({
+  source: availableTags
+});
+$( "#tags6" ).autocomplete({
+  source: availableTags
+});
+$( "#tags7" ).autocomplete({
+  source: availableTags
+});
+} );
+
+</script>
+  
+
+</body>
+</html>

@@ -64,17 +64,3 @@
 {% endfor %}
 </div>
   {% endblock %}
-  <script>
-    $( function() {
-      var availableTags = [
-          {% for k in all_mess %}
-              "{{i.title}}",
-              "{{i.desc}}",
-          {% endfor %}
-
-      ];
-      $( "#tags" ).autocomplete({
-        source: availableTags
-      });
-    } );
-    </script>

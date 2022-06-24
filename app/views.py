@@ -8,10 +8,15 @@ from django.db.models import Q
 # Create your views here.
 def index(request):
     veg_mess_object = Mess.objects.filter(is_veg=True)
-    non_veg_mess_object = Mess.objects.filter(is_veg=False)
     all_mess_object = Mess.objects.all()
-    context = {'mess':veg_mess_object, 'all_mess':all_mess_object, 'non_veg':non_veg_mess_object}
-    return render(request, "home.html", context)
+    context = {'mess':veg_mess_object, 'all_mess':all_mess_object}
+    return render(request, "veg.html", context)
+
+def nonveg(request):
+    veg_mess_object = Mess.objects.filter(is_veg=False)
+    all_mess_object = Mess.objects.all()
+    context = {'mess':veg_mess_object, 'all_mess':all_mess_object}
+    return render(request, "nonveg.html", context)
 
 def update(request, pk):
     mess_object = Mess.objects.get(mess_id=pk)
@@ -62,16 +67,16 @@ def profile(request):
     else:
         print('hello')
         return redirect('/')
-    return render(request, "profile.html", context)
+    return render(request, "userupdate.html", context)
 
 def detail(request, pk):
     detail_mess = Mess.objects.get(mess_id=pk)
     context = {'detail_mess':detail_mess}
-    return render(request, "detail.html", context)
+    return render(request, "seemore.html", context)
 
 def search(request):
     query = request.GET['query']
     producttitle = Mess.objects.filter(Q(title__icontains=query) | Q(desc__icontains=query) | Q(dish1__icontains=query) | Q(dish2__icontains=query) | Q(dish7__icontains=query) | Q(dish6__icontains=query) | Q(dish5__icontains=query) | Q(dish4__icontains=query) | Q(dish3__icontains=query))
     # holderaddress = Mess.objects.filter(address__icontains=query)
     # finalprod = producttitle.union(holderaddress)
-    return render(request, "search.html", {'mess':producttitle})
+    return render(request, "indexuser.html", {'mess':producttitle})

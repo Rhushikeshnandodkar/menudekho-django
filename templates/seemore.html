@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'reset.css' %}" />
+    <link rel="stylesheet" href="{% static 'seenew.css' %}" />
+    {% comment %} <link rel="stylesheet" href="{% static 'index.css' %}" /> {% endcomment %}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@300&family=Lato:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <!-- <div class="logo"><p>Menudekho.com</p></div> -->
+      <div class="logo"><img src="{% static 'logo.png' %}" alt="" /></div>
+
+      <div class="navlinks">
+        <ul class="links">
+          <li class="navli"><a href="/" class="active">Home</a></li>
+          <li class="navli"><a href="#">Service</a></li>
+          <li class="navli"><a href="/contact.html">Contact</a></li>
+          <li class="navli"><a href="/about.html">About</a></li>
+          <!-- <li class="navli" id="login"><a href="#">Login</a></li> -->
+          <!-- <li class="navli" id="signup"><a href="#">SignUp</a></li> -->
+        </ul>
+        <div class="ocbtn">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </div>
+    <section class="total">
+      <div class="contentone">
+        <div class="contentonef"><img src="{{detail_mess.image.url}}" alt="" /></div>
+        <div class="contentones">
+          <h3>{{detail_mess.title}} </h3>
+          <p class="price">
+            Price : <span class="cut">₹{{detail_mess.price}} </span
+            ><span class="original"> ₹{{detail_mess.cutprice}} </span>
+          </p>
+          <p class="owner">{{detail_mess.owner}}</p>
+          <h5>Menu</h5>
+          <div class="menu">
+            <ul class="menulo">
+              <li class="items">{{detail_mess.dish1}}</li>
+              <li class="items">{{detail_mess.dish2}}</li>
+              <li class="items">{{detail_mess.dish3}}</li>
+            </ul>
+            <ul class="menulo">
+              <li class="items">{{detail_mess.dish4}}</li>
+              <li class="items">{{detail_mess.dish5}}</li>
+              <li class="items">{{detail_mess.dish6}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="boxes">
+        <div class="box">  <iframe
+          src="{{detail_mess.mapurl}}"
+        
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe></div>
+        <div class="box">
+          <h5>Address</h5>
+          <p>
+         {{detail_mess.address}}
+          </p>
+        </div>
+        <div class="box">
+          <h5>Description</h5>
+          <p>
+            {{detail_mess.desc}}
+          </p>
+        </div>
+      </div>
+     
+    </section>
+    <script src="{% static 'index.js' %}"></script>
+  </body>
+</html>
