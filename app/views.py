@@ -80,3 +80,14 @@ def search(request):
     # holderaddress = Mess.objects.filter(address__icontains=query)
     # finalprod = producttitle.union(holderaddress)
     return render(request, "indexuser.html", {'mess':producttitle})
+
+def services(request):
+    return render(request, "services.html")
+
+def contact(request):
+    if request.method == "POST":
+        return redirect('/')
+    return render(request, "contact.html")
+
+def about(request):
+    return render(request, "about.html")

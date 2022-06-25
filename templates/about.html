@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'about.css' %}" />
+    <link rel="stylesheet" href="{% static 'reset.css' %}" />
+    <link rel="stylesheet" href="{% static 'index.css' %}" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@300&family=Lato:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="navbar">
+      <!-- <div class="logo"><p>Menudekho.com</p></div> -->
+      <div class="logo"><img src="{% static 'logo1.png' %}" alt=""></div>
+      
+      <div class="navlinks">
+        <ul class="links">
+          <li class="navli" ><a href="/" class="active">Home</a></li>
+          <li class="navli"><a href="services">Service</a></li>
+          <li class="navli"><a href="contact">Contact</a></li>
+          <li class="navli"><a href="about">About</a></li>
+          <!-- <li class="navli" id="login"><a href="#">Login</a></li> -->
+          <!-- <li class="navli" id="signup"><a href="#">SignUp</a></li> -->
+        </ul>
+        <div class="ocbtn">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </div>
+    <div class="header">
+      <h4>About US</h4>
+    </div>
+    <div class="container">
+      <div class="poster">
+        <p class="head">front-end</p>
+        <div class="img"></div>
+        <div class="info">
+          <p>name</p>
+          <p>age</p>
+          <p>profession</p>
+        </div>
+      </div>
+      <div class="poster">
+        <p class="head">back-end</p>
+        <div class="img"></div>
+        <div class="info">
+          <p>name</p>
+          <p>age</p>
+          <p>profession</p>
+        </div>
+      </div>
+      <div class="poster">
+        <p class="head">heading</p>
+        <div class="img"></div>
+        <div class="info">
+          <p>name</p>
+          <p>age</p>
+          <p>profession</p>
+        </div>
+      </div>
+    </div>
+    
+  <script src="{% static 'index.js' %}"></script>
+  </body>
+</html>

@@ -213,6 +213,9 @@ body{
     font-weight: 600;
     color: rgb(0, 0, 0, 0.6);
 }
+.heading{
+  text-align: center;
+}
 .messposter{
     /* border: 2px solid black; */
     /* box-sizing: border-box; */

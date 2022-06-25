@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'contact.css' %}" />
+    <link rel="stylesheet" href="{% static 'reset.css' %}" />
+    <link rel="stylesheet" href="{% static 'index.css' %}" />
+  </head>
+  <body>
+    <div class="navbar">
+      <!-- <div class="logo"><p>Menudekho.com</p></div> -->
+      <div class="logo"><img src="{% static 'logo1.png' %}" alt=""></div>
+      
+      <div class="navlinks">
+        <ul class="links">
+          <li class="navli" ><a href="/" class="active">Home</a></li>
+          <li class="navli"><a href="services">Service</a></li>
+          <li class="navli"><a href="contact">Contact</a></li>
+          <li class="navli"><a href="about">About</a></li>
+          <!-- <li class="navli" id="login"><a href="#">Login</a></li> -->
+          <!-- <li class="navli" id="signup"><a href="#">SignUp</a></li> -->
+        </ul>
+        <div class="ocbtn">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </div>
+    <section class="mid">
+      <div class="left">
+       <h1>Address</h1>
+       <h2>Shivneri Boys Hostel Scoe Pune</h2>
+       <h3>amey korde : room-217</h3>
+       <h3>Rhushikesh Nandodkar : room-402</h3>
+      </div>
+      <div class="right">
+        <h5 class="head">Contact</h5>
+        <p class="numo">91-9420793421</p>
+        <p class="numt">91-9146837805</p>
+      </div>
+    </section>
+    <script src="{% static 'index.js' %}"></script>
+  </body>
+</html>

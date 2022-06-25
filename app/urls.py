@@ -10,5 +10,8 @@ urlpatterns = [
     path('profile', views.profile, name="profile"),
     path('detail/<int:pk>', views.detail, name="detail"),
     path('search', views.search, name="search"),
+    path('services', views.services, name="services"),
+    path('contact', views.contact, name="contact"),
+    path('about', views.about, name="about"),
     
 ]

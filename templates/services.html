@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'reset.css' %}" />
+    <link rel="stylesheet" href="{% static 'index.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.google<!DOCTYPE html>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300&family=Lato:wght@300&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+<script src=  
+"https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js">  
+    </script>  
+    
+    <script src=  
+"https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js">  
+    </script>  
+    
+    <link href=  
+"http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/ui-lightness/jquery-ui.css"
+        rel="stylesheet" type="text/css" />  
+    
+  </head>
+  <style>
+    .services{
+        display: flex;
+        flex-direction: row;
+    }
+  .ser{
+    margin: 2%;
+  }
+  .ser img{
+    width: 500px;
+    height: 250px;
+  }
+  .ser p{
+    padding-top: 2%;
+  }
+  .ser h2{
+    padding-top: 1%;
+    font-size: 40px;
+    color: red;
+    font-weight: bolder;
+  }
+  @media (max-width:800px) {
+    .services{
+        flex-direction: column;
+        text-align: center;
+    }
+    .ser img{
+        height: 170px;
+        width: 90%;
+    }
+    .ser{
+        width: 80%;
+        margin: auto;
+    }
+  }
+  </style>
+  <body>
+    <section class="home-page">
+        <div class="navbar">
+            <!-- <div class="logo"><p>Menudekho.com</p></div> -->
+            <div class="logo"><img src="{% static 'logo1.png' %}" alt=""></div>
+            
+            <div class="navlinks">
+              <ul class="links">
+                <li class="navli" ><a href="/" class="active">Home</a></li>
+                <li class="navli"><a href="services">Service</a></li>
+                <li class="navli"><a href="contact">Contact</a></li>
+                <li class="navli"><a href="about">About</a></li>
+                <!-- <li class="navli" id="login"><a href="#">Login</a></li> -->
+                <!-- <li class="navli" id="signup"><a href="#">SignUp</a></li> -->
+              </ul>
+              <div class="ocbtn">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+              </div>
+            </div>
+          </div>
+      <div class="services">
+        <div class="ser">
+            <img src="{% static 'logo.png' %}" alt="">
+        </div>
+        <div class="ser">
+            <h2>What We Offer?</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora magni fugit repudiandae, quod maxime sint voluptates molestias inventore, aut odit enim amet. Magni, cumque libero necessitatibus accusamus quia quos eius optio enim consectetur quibusdam. Velit quod expedita voluptatem illum repellat. Nam iusto perspiciatis perferendis non minus facilis atque modi eos voluptatibus, praesentium autem tenetur cupiditate sit accusamus voluptate hic quisquam ipsum omnis ad distinctio eum voluptas adipisci. Fugit, doloremque suscipit. <br>
+                 ipsum dolor sit amet consectetur adipisicing elit. Tempora magni fugit repudiandae, quod maxime sint voluptates molestias inventore, aut odit enim amet. Magni, cumque libero necessitatibus accusamus quia quos eius optio enim consectetur quibusdam. Velit quod expedita voluptatem illum repellat. Nam iusto perspiciatis perferendis non minus facilis atque modi eos voluptatibus, praesentium autem tenetur cupiditate sit accusamus voluptate hic quisquam ipsum omnis ad distinctio eum voluptas adipisci. Fugit, doloremque suscipit. <br>
+            </p>
+        </div>
+        
+      </div>
+
+      <script src="{% static 'index.js' %}"></script>
+</body>
+</html>

@@ -198,6 +198,9 @@ body{
     text-align: justify;
     color: rgb(0, 0, 0, 0.6);
 }
+.heading{
+  text-align: center;
+}
 
 .messheading{
     font-size: 1.2rem;
@@ -459,6 +462,7 @@ body{
     .navbar{
         border-bottom: 1px solid rgb(128, 128, 128, 0.3);
     }
+ 
     .links{
         position: fixed;
         left: -100%;

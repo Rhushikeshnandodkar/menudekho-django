@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="{% static 'reset.css' %}" />
-    <link rel="stylesheet" href="{% static 'index.css' %}" />
+    <link rel="stylesheet" href="{% static 'vegmess.css' %}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
     <link rel="preconnect" href="https://fonts.google<!DOCTYPE html>
@@ -36,10 +36,10 @@
         
         <div class="navlinks">
           <ul class="links">
-            <li class="navli" ><a href="/index.html" class="active">Home</a></li>
-            <li class="navli"><a href="#">Service</a></li>
-            <li class="navli"><a href="/contact.html">Contact</a></li>
-            <li class="navli"><a href="/about.html">About</a></li>
+            <li class="navli" ><a href="/" class="active">Home</a></li>
+            <li class="navli"><a href="services">Service</a></li>
+            <li class="navli"><a href="contact">Contact</a></li>
+            <li class="navli"><a href="about">About</a></li>
             <!-- <li class="navli" id="login"><a href="#">Login</a></li> -->
             <!-- <li class="navli" id="signup"><a href="#">SignUp</a></li> -->
           </ul>
@@ -76,7 +76,7 @@
     </div>
 
         <div class="mess">
-          <p >All Top MESS</p>
+          <p class="heading">All Top MESS</p>
           {% for i in mess %}
           <div class="messposter">
               <img src="{{i.image.url}}" alt="" />
